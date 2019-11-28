@@ -46,9 +46,9 @@ def pay(request, user_id):
         'total_amount': 4900,
         'vat_amount': 490,
         'tax_free_amount': 0,
-        'approval_url': 'http://127.0.0.1:8000/payments/success/',
-        'fail_url': 'http://127.0.0.1:8000/payments/fail/',
-        'cancel_url': 'http://127.0.0.1:8000/payments/cancel/',
+        'approval_url': 'https://yangyeom.herokuapp.com/payments/success/',
+        'fail_url': 'https://yangyeom.herokuapp.com/payments/fail/',
+        'cancel_url': 'https://yangyeom.herokuapp.com/payments/cancel/',
     }
     data = req('/v1/payment/ready', '', params)
     tid = data['tid']
