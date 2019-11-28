@@ -8,8 +8,8 @@ class Genre(models.Model):
 
 class Movie(models.Model):
     code = models.IntegerField(primary_key=True)
-    title = models.CharField(max_length=30)
-    poster_url = models.CharField(max_length=140)
+    title = models.CharField(max_length=1000)
+    poster_url = models.CharField(max_length=1000)
     description = models.TextField()
     genres = models.ManyToManyField(Genre, related_name='movies', blank=True)
     like_users = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='like_movies')
