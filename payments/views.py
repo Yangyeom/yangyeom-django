@@ -76,9 +76,9 @@ def success(request):
     User = get_user_model().objects.get(id=user)
     User.paid = True
     User.save()
-    payment = Payment(aid=data['aid'], tid=data['tid'], payment_method_type=data['payment_method_type'],
-                item_name=data['item_name'], item_code=['item_code'], amount=data['amount']['total'],
-                created_at=data['created_at'], approved_at=data['approved_at'], user=User)
-    payment.save()
+    # payment = Payment(aid=data['aid'], tid=data['tid'], payment_method_type=data['payment_method_type'],
+    #             item_name=data['item_name'], item_code=['item_code'], amount=data['amount']['total'],
+    #             created_at=data['created_at'], approved_at=data['approved_at'], user=User)
+    # payment.save()
 
     return render(request, 'payments/success.html')
